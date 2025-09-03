@@ -5,7 +5,7 @@
   --accent: #ffd600;
   --white: #fff;
   --overlay-dark: rgba(20, 30, 40, 0.7);
-  --overlay-light: rgba(255, 255, 255, 0.4);
+  --overlay-light: rgba(255, 255, 255, 0.46);
   --footer-bg: #0c1e3c;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 3rem 1rem;
   z-index: 2;
@@ -67,12 +67,12 @@ h1 {
 h3 {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   margin-bottom: .75rem;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.18rem;
   line-height: 1.7;
   margin-bottom: 1.2rem;
 }
@@ -84,7 +84,7 @@ p {
   padding: .9em 2em;
   border-radius: 32px;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   border: none;
   box-shadow: 0 4px 24px rgba(0,0,0,0.15);
   text-decoration: none;
@@ -104,10 +104,41 @@ p {
 }
 
 .subheadline {
-  font-size: 1.3rem;
+  font-size: 1.33rem;
   margin-bottom: 2rem;
   font-weight: 400;
-  opacity: 0.95;
+  opacity: 0.96;
+}
+
+/* Logo & Site Title */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  position: absolute;
+  top: 2.1rem;
+  left: 2.1rem;
+  z-index: 3;
+}
+
+.site-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+  background: #fff;
+  border: 2px solid var(--accent);
+}
+
+.site-title {
+  font-family: var(--font-headline);
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-shadow: 0 2px 16px rgba(0,0,0,.10);
+  margin-left: .22rem;
 }
 
 .hero {
@@ -131,8 +162,9 @@ p {
   to { opacity: 1; transform: translateY(0);}
 }
 
+/* How It Works Section background */
 .how-it-works {
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+  background: url('https://raw.githubusercontent.com/Neolexus/kombi-ads/refs/heads/main/See-through%20window%20kombi%20ads.png') center center/cover no-repeat;
   min-height: 80vh;
 }
 
@@ -152,8 +184,8 @@ p {
   background: var(--overlay-light);
   border-radius: 20px;
   padding: 2rem 1.5rem;
-  min-width: 220px;
-  max-width: 260px;
+  min-width: 230px;
+  max-width: 275px;
   box-shadow: 0 2px 16px rgba(0,0,0,.12);
   color: #222;
   animation: fadeUp .8s;
@@ -172,8 +204,9 @@ p {
   margin-bottom: .5rem;
 }
 
+/* Ad Formats Section background */
 .ad-formats {
-  background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+  background: url('https://raw.githubusercontent.com/Neolexus/kombi-ads/refs/heads/main/Back%20door%20ad%20-%20kombi%20ads.png') center center/cover no-repeat;
   min-height: 80vh;
 }
 
@@ -183,15 +216,15 @@ p {
 
 .formats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.3rem;
   margin-top: 2.5rem;
 }
 
 .format-card {
   background: var(--overlay-light);
   border-radius: 18px;
-  padding: 1.5rem 1rem;
+  padding: 2.2rem 1rem 1.5rem 1rem;
   text-align: center;
   box-shadow: 0 2px 16px rgba(0,0,0,.12);
   color: #222;
@@ -204,17 +237,19 @@ p {
 }
 
 .format-card img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 210px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   background: #fff;
+  border: 2px solid var(--accent);
 }
 
+/* Why Kombi Ads Section background */
 .why-kombi-ads {
-  background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+  background: url('https://raw.githubusercontent.com/Neolexus/kombi-ads/refs/heads/main/Full%20vehicle%20wrap%20kombi%20ads.png') center center/cover no-repeat;
   min-height: 70vh;
 }
 
@@ -224,7 +259,7 @@ p {
 
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   margin-top: 2.5rem;
 }
@@ -238,6 +273,7 @@ p {
   animation: fadeUp .8s;
 }
 
+/* Footer background unchanged for street energy */
 .footer-cta {
   background: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=80') center center/cover no-repeat;
   min-height: 60vh;
@@ -252,7 +288,7 @@ p {
 
 .contact-details {
   margin-top: 1.8rem;
-  font-size: 1.12rem;
+  font-size: 1.13rem;
   color: var(--white);
 }
 
@@ -272,6 +308,10 @@ p {
   h2 { font-size: 1.7rem; }
   .container { padding: 2rem 0.7rem; }
   .steps, .formats-grid, .benefits-grid { gap: 1.2rem; }
+  .format-card img { width: 170px; height: 105px; }
+  .site-header { top: 1.1rem; left: 1.1rem; }
+  .site-logo { width: 42px; height: 42px; }
+  .site-title { font-size: 1.08rem; }
 }
 
 @media (max-width: 600px) {
@@ -289,5 +329,9 @@ p {
     margin-bottom: 1rem;
     padding: 1.2rem 0.5rem;
   }
+  .format-card img { width: 95vw; max-width: 340px; height: 80px; }
   .footer-content { padding: 1.5rem 0.5rem; }
+  .site-header { top: .7rem; left: .7rem; }
+  .site-logo { width: 36px; height: 36px; }
+  .site-title { font-size: .9rem; }
 }
